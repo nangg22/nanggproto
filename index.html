@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nanggporto</title>
+    <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="light-mode">
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader">
+            <div class="spinner"></div>
+            <p class="loader-text">Memuat...</p>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ambient 3D background orbs -->
+    <div class="ambient-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <nav id="navbar">
+        <div class="container nav-container">
+            <div class="logo">Nangg<span>.</span></div>
+            <ul class="nav-links">
+                <li><a href="#hero">Beranda</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#skills">Keahlian</a></li>
+                <li><a href="#console">Konsol</a></li>
+                <li><a href="#experience">Pengalaman</a></li>
+                <li><a href="#portfolio">Proyek</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content" data-reveal="left">
+                    <h1 class="typing-text">Halo, Saya Danang</h1>
+                    <p class="tagline">Junior Software Developer & Sistem Informasi Student</p>
+                    <p class="hero-desc">Seorang mahasiswa sistem informasi yang senang belajar hal baru, terutama di
+                        bidang software development. Saat ini saya aktif sebagai mahasiswa semester 4 dan sedang
+                        mendalami dunia AI dan Data Science.</p>
+                    <div class="hero-btns">
+                        <a href="#contact" class="btn btn-primary">Hubungi Saya</a>
+                        <a href="#" class="btn btn-outline">Unduh CV</a>
+                    </div>
+                </div>
+                <div class="hero-image" data-reveal="right">
+                    <div class="image-wrapper">
+                        <img id="profile-img" src="assets/images/profile_light.png" alt="Danang Prajadinata Adiwijaya">
+                        <div class="image-bg"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title" data-reveal="top">Tentang Saya</h2>
+                <div class="about-grid">
+                    <div class="about-text" data-reveal="left">
+                        <p>Saya adalah mahasiswa Sistem Informasi yang berdedikasi dan seorang Junior Software
+                            Developer. Saya memiliki minat besar dalam pengembangan aplikasi web dan desain antarmuka
+                            pengguna yang modern.</p>
+                        <p>Saya juga suka dengan pencak silat dan aktif menjadi salah satu anggota UKM Pencak Silat yang
+                            bernama PSHT UISI & Pendukung No 1 Manchester United garis keras</p>
+                    </div>
+                    <div class="about-stats" data-reveal="right">
+                        <div class="stat-card">
+                            <h3 class="counter" data-target="19">0</h3>
+                            <p>Proyek Selesai</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3 class="counter" data-target="2">0</h3>
+                            <p>Sertifikasi</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3 class="counter" data-target="2">0</h3>
+                            <p>Tahun Belajar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <h2 class="section-title" data-reveal="top">Keahlian</h2>
+                <div class="skills-grid">
+                    <div class="skill-item" data-reveal="bottom">
+                        <div class="skill-info">
+                            <span>HTML5 & CSS3</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 0;" data-width="90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item" data-reveal="bottom">
+                        <div class="skill-info">
+                            <span>JavaScript</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 0;" data-width="85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item" data-reveal="bottom">
+                        <div class="skill-info">
+                            <span>PHP & MySQL</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 0;" data-width="80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item" data-reveal="bottom">
+                        <div class="skill-info">
+                            <span>UI/UX Design</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 0;" data-width="75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item" data-reveal="bottom">
+                        <div class="skill-info">
+                            <span>Problem Solving</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 0;" data-width="90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item" data-reveal="bottom">
+                        <div class="skill-info">
+                            <span>Cyber Scurity</span>
+                            <span>65%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 0;" data-width="65%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience-section">
+            <div class="container">
+                <h2 class="section-title" data-reveal="top">Pendidikan & Pengalaman</h2>
+                <div class="timeline">
+                    <div class="timeline-item" data-reveal="left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="date">2024 - Sekarang</span>
+                            <h3>S1 Sistem Informasi</h3>
+                            <p>Menempuh pendidikan sarjana dengan fokus pada manajemen data dan pengembangan sistem
+                                informasi bisnis.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-reveal="right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="date">2025</span>
+                            <h3>Juara 2 Pencak Silat PANGDIV 2 CUP</h3>
+                            <p>Kejuaraan Nasional Pencak Silat oleh 2nd INFANTRY DIVISION OF MALANG CONSTRAD</p>
+                            <img src="C:\Users\danan\OneDrive\Pictures\Screenshots\Screenshot 2025-07-25 211923.png"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-reveal="left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="date">2024</span>
+                            <h3>Juara 3 Pencak Silat DANDIM CUP</h3>
+                            <p>Kejuaraan Nasional Pencak Silat oleh Kemenpora x Dandim Kota Malang.</p>
+                            <img src="C:\Users\danan\Downloads\SaveClip.App_567736354_1314228057144982_1578886664386800120_n.jpg"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-reveal="left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="date">2023</span>
+                            <h3>Juara Harapan 3 Pencak Silat Pemkab Lamongan</h3>
+                            <p>Kejuaraan Pencak Silat oleh Pemkab Lamongan.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-reveal="left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="date">2023</span>
+                            <h3>Juara Harapan 2 Pencak Silat Pemda</h3>
+                            <p>Kejuaraan Pencak Silat Pemda  </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio-section">
+            <div class="container">
+                <h2 class="section-title" data-reveal="top">Proyek Portofolio</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-card" data-reveal="bottom">
+                        <div class="portfolio-img">
+                            <img src="C:\Users\danan\OneDrive\Pictures\Screenshots\Screenshot 2026-05-27 235932.png"
+                                alt="Project 1">
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Movie App</h3>
+                            <p>Aplikasi pencarian film dengan informasi lengkap dan trailer.</p>
+                            <a href="https://my-movie-app-ecru.vercel.app/" class="portfolio-link">Lihat Detail <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="portfolio-card" data-reveal="bottom">
+                        <div class="portfolio-img">
+                            <img src="C:\Users\danan\OneDrive\Pictures\Screenshots\Screenshot 2026-01-17 145121.png"
+                                alt="Project 2">
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Game Edukasi</h3>
+                            <p>Game edukasi untuk anak-anak mengenalkan budaya indonesia.</p>
+                            <a href="./game.html" class="portfolio-link">Lihat Detail <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="portfolio-card" data-reveal="bottom">
+                        <div class="portfolio-img">
+                            <img src="C:\Users\danan\OneDrive\Pictures\Screenshots\Screenshot 2026-05-27 235335.png"
+                                alt="Project 3">
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Farmer Tracker App</h3>
+                            <p>Aplikasi pencatatan cuaca & kebun yang membantu petani vanili.</p>
+                            <a href="https://vanilla-plantation-m-uxh8.bolt.host/" class="portfolio-link">Lihat Detail
+                                <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title" data-reveal="top">Hubungi Saya</h2>
+                <div class="contact-grid">
+                    <div class="contact-info" data-reveal="left">
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>dpraja620@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Telepon</h4>
+                                <p>+62 812 3136 8799</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-location-dot"></i>
+                            <div>
+                                <h4>Lokasi</h4>
+                                <p>Gresik, Indonesia</p>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/danang-prajadinata-adiwijaya-89ab84354"><i
+                                    class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/nangg22"><i class="fab fa-github"></i></a>
+                            <a href="https://www.tiktok.com/@nanggxd_"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.instagram.com/dnanggpraja/?hl=en"><i class="fab fa-instagram"></i></a>
+                            <a href="https://x.com/Nanggxd7"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-form" data-reveal="right">
+                        <form id="form-contact">
+                            <div class="form-group">
+                                <input type="text" id="name" placeholder="Nama Lengkap" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" placeholder="Alamat Email" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" rows="5" placeholder="Pesan Anda" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Kirim Pesan</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Danang<span>.</span></div>
+                <p>&copy; 2024 Danang Prajadinata Adiwijaya. Dibuat dengan jiwa <span>Glory Glory Manchester
+                        United</span>.</p>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/danang-prajadinata-adiwijaya-89ab84354"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/nangg22"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/dnanggpraja"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@nanggxd_"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://x.com/Nanggxd7"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
