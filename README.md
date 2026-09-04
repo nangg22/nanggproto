@@ -83,8 +83,8 @@ cd UTS_NIM_DanangPrajadinataAdiwijaya
 | 🎬 **Movie App** | Pencarian film dengan info lengkap & trailer | [Demo](https://my-movie-app-ecru.vercel.app/) |
 | 🎮 **Game Edukasi** | Mengenalkan budaya Indonesia untuk anak-anak | [Repo](https://github.com/nangg22/) |
 | 🌿 **Farmer Tracker App** | Pencatatan cuaca & kebun petani vanili | [Demo](https://vanilla-plantation-m-uxh8.bolt.host/) |
-| 🎓 **Scholarship Apps** | Manajemen pendaftaran beasiswa | [Repo](https://github.com/nangg22/scholarship-apps) |
-| 🛒 **Marketplace** | Platform e-commerce jual beli produk | [Repo](https://github.com/nangg22/marketplace) |
+| 🎓 **Scholarship Apps** | Manajemen pendaftaran beasiswa | [Demo](https://scholarship-apps-xi.vercel.app/onboarding) |
+| 🛒 **Marketplace** | Platform e-commerce jual beli produk | [Demo](https://marketplace-1vxs.vercel.app/) |
 
 ---
 
