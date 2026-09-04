@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Halaman Tidak Ditemukan | Nanggporto</title>
+    <meta name="description" content="Halaman yang Anda cari tidak ditemukan.">
+    <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #b00000 0%, #ff0000 100%);
+            --primary: #c20000;
+            --primary-glow: rgba(255, 0, 0, 0.25);
+            --background: #ffffff;
+            --surface: rgba(255, 255, 255, 0.92);
+            --text: #111111;
+            --text-muted: #555555;
+            --border: rgba(255, 0, 0, 0.12);
+            --transition-bouncy: cubic-bezier(0.34, 1.56, 0.64, 1);
+            --border-radius-lg: 28px;
+            --shadow-elevated: 0 30px 60px rgba(38, 22, 28, 0.08);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+        .ambient-orbs {
+            position: fixed; top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            z-index: -2; pointer-events: none;
+            overflow: hidden; opacity: 0.55;
+            filter: blur(130px);
+        }
+        .orb { position: absolute; border-radius: 50%; }
+        .orb-1 {
+            top: -15%; right: -15%; width: 55vw; height: 55vw;
+            background: var(--primary-gradient);
+            animation: orbFloat 25s infinite alternate ease-in-out;
+        }
+        .orb-2 {
+            bottom: -15%; left: -15%; width: 45vw; height: 45vw;
+            background: linear-gradient(135deg, #ffffff 0%, #f2f2f2 100%);
+            animation: orbFloat 30s infinite alternate-reverse ease-in-out;
+        }
+        @keyframes orbFloat {
+            0%   { transform: translate(0, 0) scale(1); }
+            50%  { transform: translate(5%, 8%) scale(1.1); }
+            100% { transform: translate(-5%, -5%) scale(0.9); }
+        }
+        .container-404 {
+            text-align: center;
+            padding: 3rem;
+            background: var(--surface);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid var(--border);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-elevated);
+            max-width: 560px;
+            width: 90%;
+            animation: fadeUp 0.8s var(--transition-bouncy) forwards;
+        }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .error-code {
+            font-size: 9rem;
+            font-weight: 800;
+            letter-spacing: -6px;
+            line-height: 1;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+            animation: glitch 3s infinite;
+        }
+        @keyframes glitch {
+            0%, 100% { transform: translateX(0); filter: none; }
+            2%        { transform: translateX(-3px); filter: hue-rotate(30deg); }
+            4%        { transform: translateX(3px); filter: none; }
+            6%        { transform: translateX(0); }
+        }
+        .error-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.2rem;
+            display: block;
+        }
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+        p {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+        .btn-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 0.9rem 2.2rem;
+            border-radius: 100px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            border: none;
+            background: var(--primary-gradient);
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.4s var(--transition-bouncy);
+            box-shadow: 0 10px 30px var(--primary-glow);
+        }
+        .btn-home:hover {
+            transform: translateY(-4px) scale(1.04);
+            box-shadow: 0 16px 40px var(--primary-glow);
+        }
+        .footer-note {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        .footer-note a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="ambient-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+    </div>
+
+    <div class="container-404">
+        <span class="error-icon">🔍</span>
+        <div class="error-code">404</div>
+        <h1>Halaman Tidak Ditemukan</h1>
+        <p>Sepertinya halaman yang Anda cari telah dipindahkan, dihapus, atau mungkin tidak pernah ada. Tenang saja, saya masih di sini!</p>
+        <a href="/" class="btn-home">
+            <i class="fas fa-home"></i>
+            Kembali ke Beranda
+        </a>
+        <p class="footer-note">
+            Atau coba cek <a href="https://github.com/nangg22" target="_blank">GitHub saya</a> untuk proyek terbaru.
+        </p>
+    </div>
+</body>
+</html>

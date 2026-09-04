@@ -97,10 +97,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 3. Navbar Scroll Shrink & Active Links Highlighting
+    // 3. Navbar Scroll Shrink, Active Links, Scroll Progress Bar, Back to Top
     const navbar = document.getElementById('navbar');
     const sections = document.querySelectorAll('section');
     const navLinksItems = document.querySelectorAll('.nav-links a');
+    const scrollProgressBar = document.getElementById('scroll-progress-bar');
+    const backToTopBtn = document.getElementById('back-to-top');
 
     window.addEventListener('scroll', () => {
         // Navbar shrink
@@ -110,11 +112,27 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.classList.remove('shrink');
         }
 
+        // Scroll Progress Bar
+        if (scrollProgressBar) {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            scrollProgressBar.style.width = `${progress}%`;
+        }
+
+        // Back to Top Button
+        if (backToTopBtn) {
+            if (window.scrollY > 400) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        }
+
         // Active link tracking
         let current = '';
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
             if (pageYOffset >= (sectionTop - 150)) {
                 current = section.getAttribute('id');
             }
@@ -127,6 +145,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Back to Top click handler
+    if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 
     // 4. One UI Custom Scroll Reveal Animation
     const revealElements = document.querySelectorAll('[data-reveal]');
@@ -246,10 +271,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 9. Form Validation & Submission (Mock)
+    // 9. Form Validation & Submission (Formspree AJAX)
     const contactForm = document.getElementById('form-contact');
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             const btn = contactForm.querySelector('button');
             const originalText = btn.innerText;
@@ -257,13 +282,29 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> Mengirim...';
             btn.disabled = true;
 
-            setTimeout(() => {
-                // One UI-styled success notification instead of browser alert
-                showNotification('Pesan terkirim! Terima kasih telah menghubungi saya.');
-                contactForm.reset();
+            const formData = new FormData(contactForm);
+            
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    showNotification('Pesan terkirim! Terima kasih telah menghubungi saya.');
+                    contactForm.reset();
+                } else {
+                    showNotification('Gagal mengirim pesan. Silakan coba lagi.');
+                }
+            } catch (error) {
+                showNotification('Terjadi kesalahan jaringan.');
+            } finally {
                 btn.innerText = originalText;
                 btn.disabled = false;
-            }, 1500);
+            }
         });
     }
 
@@ -313,7 +354,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3500);
     }
 
-    // 10. Developer Controls: Ambient Orb Motion Slider
+    // 10. Floating Settings Panel Toggle
+    const settingsToggle = document.getElementById('settings-toggle');
+    const settingsPanel = document.querySelector('.settings-panel');
+    if (settingsToggle && settingsPanel) {
+        settingsToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            settingsPanel.classList.toggle('active');
+        });
+
+        // Close when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!settingsPanel.contains(e.target) && !settingsToggle.contains(e.target)) {
+                settingsPanel.classList.remove('active');
+            }
+        });
+    }
+
+    // 11. Developer Controls: Ambient Orb Motion Slider
     const speedSlider = document.getElementById('orb-speed');
     const speedVal = document.getElementById('orb-speed-val');
     const orbs = document.querySelectorAll('.orb');
@@ -443,6 +501,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     <p>1. <span class="cmd-highlight">Movie App</span> - Aplikasi pencarian film (React & Vercel).</p>
                     <p>2. <span class="cmd-highlight">Game Edukasi</span> - Mengenalkan budaya Indonesia ke anak-anak.</p>
                     <p>3. <span class="cmd-highlight">Farmer Tracker App</span> - Aplikasi pencatatan cuaca & kebun petani vanili.</p>
+                    <p>4. <span class="cmd-highlight">Scholarship Apps</span> - Manajemen pendaftaran beasiswa.</p>
+                    <p>5. <span class="cmd-highlight">Marketplace</span> - Platform e-commerce transaksi jual beli.</p>
                 `;
                 break;
             case 'silat':

@@ -4,7 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nanggporto</title>
+    <title>Nanggporto - Portfolio Danang Prajadinata</title>
+    <meta name="description" content="Portfolio of Danang Prajadinata Adiwijaya. Junior Software Developer, AI Enthusiast, and Material Arts.">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Nanggporto - Portfolio Danang Prajadinata">
+    <meta property="og:description" content="Junior Software Developer, AI Enthusiast, and Material Arts.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nanggporto.vercel.app">
     <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <!-- Font Awesome for icons -->
@@ -15,6 +23,8 @@
 </head>
 
 <body class="light-mode">
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress-bar"></div>
     <div id="loading-screen" class="loading-screen">
         <div class="loader">
             <div class="spinner"></div>
@@ -63,13 +73,13 @@
             <div class="container hero-container">
                 <div class="hero-content" data-reveal="left">
                     <h1 class="typing-text">Halo, Saya Danang</h1>
-                    <p class="tagline">Junior Software Developer & Material Arts</p>
+                    <p class="tagline">Junior Software Developer & Martial Arts</p>
                     <p class="hero-desc">Seorang mahasiswa sistem informasi yang senang belajar hal baru, terutama di
                         bidang software development. Saat ini saya aktif sebagai mahasiswa semester 4 dan sedang
                         mendalami dunia AI dan Data Science.</p>
                     <div class="hero-btns">
                         <a href="#contact" class="btn btn-primary">Hubungi Saya</a>
-                        <a href="#" class="btn btn-outline">Unduh CV</a>
+                        <a href="assets/cv/Danang_CV.pdf" download class="btn btn-outline">Unduh CV</a>
                     </div>
                 </div>
                 <div class="hero-image" data-reveal="right">
@@ -95,7 +105,7 @@
                     </div>
                     <div class="about-stats" data-reveal="right">
                         <div class="stat-card">
-                            <h3 class="counter" data-target="19">0</h3>
+                            <h3 class="counter" data-target="5">0</h3>
                             <p>Proyek Selesai</p>
                         </div>
                         <div class="stat-card">
@@ -103,7 +113,7 @@
                             <p>Sertifikasi</p>
                         </div>
                         <div class="stat-card">
-                            <h3 class="counter" data-target="2">0</h3>
+                            <h3 class="counter" data-target="3">0</h3>
                             <p>Tahun Belajar</p>
                         </div>
                     </div>
@@ -163,7 +173,7 @@
                     </div>
                     <div class="skill-item" data-reveal="bottom">
                         <div class="skill-info">
-                            <span>Cyber Scurity</span>
+                            <span>Cyber Security</span>
                             <span>65%</span>
                         </div>
                         <div class="skill-bar">
@@ -187,6 +197,34 @@
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 0;" data-width="100%"></div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Console Section -->
+        <section id="console" class="console-section">
+            <div class="container">
+                <h2 class="section-title" data-reveal="top">Konsol Interaktif</h2>
+                <div class="terminal-container" data-reveal="bottom">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span class="close-btn"></span>
+                            <span class="min-btn"></span>
+                            <span class="max-btn"></span>
+                        </div>
+                        <div class="terminal-title">danang@oneui-portfolio:~</div>
+                    </div>
+                    <div id="terminal-body" class="terminal-body">
+                        <div class="terminal-output">
+                            <p>Selamat datang di NanggOS Terminal v1.0.</p>
+                            <p>Ketik <span class="cmd-highlight">help</span> untuk melihat daftar perintah yang tersedia.</p>
+                        </div>
+                        <div class="terminal-input-line">
+                            <span class="prompt">danang@oneui-portfolio:~$</span>
+                            <input type="text" id="terminal-input" autocomplete="off" spellcheck="false">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -211,7 +249,7 @@
                             <span class="date">2025</span>
                             <h3>Juara 2 Pencak Silat PANGDIV 2 CUP</h3>
                             <p>Kejuaraan Nasional Pencak Silat oleh 2nd INFANTRY DIVISION OF MALANG CONSTRAD</p>
-                            <img src="assets\images\Screenshot 2025-07-25 211923.png" alt="">
+                            <img src="assets/images/Screenshot 2025-07-25 211923.png" alt="Juara 2 Pencak Silat PANGDIV 2 CUP" loading="lazy">
                         </div>
                     </div>
                     <div class="timeline-item" data-reveal="left">
@@ -220,8 +258,8 @@
                             <span class="date">2024</span>
                             <h3>Juara 3 Pencak Silat DANDIM CUP</h3>
                             <p>Kejuaraan Nasional Pencak Silat oleh Kemenpora x Dandim Kota Malang.</p>
-                            <img src="assets\images\SaveClip.App_567736354_1314228057144982_1578886664386800120_n.jpg"
-                                alt="">
+                            <img src="assets/images/SaveClip.App_567736354_1314228057144982_1578886664386800120_n.jpg"
+                                alt="Juara 3 Pencak Silat DANDIM CUP" loading="lazy">
                         </div>
                     </div>
                     <div class="timeline-item" data-reveal="left">
@@ -251,35 +289,68 @@
                 <div class="portfolio-grid">
                     <div class="portfolio-card" data-reveal="bottom">
                         <div class="portfolio-img">
-                            <img src="assets\images\Screenshot 2026-05-27 235932.png" alt="Project 1">
+                            <img src="assets/images/Screenshot 2026-05-27 235932.png" alt="Project 1" loading="lazy">
                         </div>
                         <div class="portfolio-info">
                             <h3>Movie App</h3>
                             <p>Aplikasi pencarian film dengan informasi lengkap dan trailer.</p>
-                            <a href="https://my-movie-app-ecru.vercel.app/" class="portfolio-link">Lihat Detail <i
-                                    class="fas fa-arrow-right"></i></a>
+                            <div style="display: flex; gap: 15px; align-items: center; margin-top: 15px;">
+                                <a href="https://my-movie-app-ecru.vercel.app/" class="portfolio-link" target="_blank">Lihat Detail <i class="fas fa-arrow-right"></i></a>
+                                <a href="https://github.com/nangg22/my-movie-app" target="_blank" title="Source Code" style="color: var(--text-muted); font-size: 1.3rem; transition: color 0.3s;"><i class="fab fa-github"></i></a>
+                            </div>
                         </div>
                     </div>
                     <div class="portfolio-card" data-reveal="bottom">
                         <div class="portfolio-img">
-                            <img src="assets\images\Screenshot 2026-01-17 145121.png" alt="Project 2">
+                            <img src="assets/images/Screenshot 2026-01-17 145121.png" alt="Project 2" loading="lazy">
                         </div>
                         <div class="portfolio-info">
                             <h3>Game Edukasi</h3>
                             <p>Game edukasi untuk anak-anak mengenalkan budaya indonesia.</p>
-                            <a href="./game.html" class="portfolio-link">Lihat Detail <i
-                                    class="fas fa-arrow-right"></i></a>
+                            <div style="display: flex; gap: 15px; align-items: center; margin-top: 15px;">
+                                <a href="./game.html" class="portfolio-link" target="_blank">Lihat Detail <i class="fas fa-arrow-right"></i></a>
+                                <a href="https://github.com/nangg22/" target="_blank" title="Source Code" style="color: var(--text-muted); font-size: 1.3rem; transition: color 0.3s;"><i class="fab fa-github"></i></a>
+                            </div>
                         </div>
                     </div>
                     <div class="portfolio-card" data-reveal="bottom">
                         <div class="portfolio-img">
-                            <img src="assets\images\Screenshot 2026-05-27 235335.png" alt="Project 3">
+                            <img src="assets/images/Screenshot 2026-05-27 235335.png" alt="Project 3" loading="lazy">
                         </div>
                         <div class="portfolio-info">
                             <h3>Farmer Tracker App</h3>
                             <p>Aplikasi pencatatan cuaca & kebun yang membantu petani vanili.</p>
-                            <a href="https://vanilla-plantation-m-uxh8.bolt.host/" class="portfolio-link">Lihat Detail
-                                <i class="fas fa-arrow-right"></i></a>
+                            <div style="display: flex; gap: 15px; align-items: center; margin-top: 15px;">
+                                <a href="https://vanilla-plantation-m-uxh8.bolt.host/" class="portfolio-link" target="_blank">Lihat Detail <i class="fas fa-arrow-right"></i></a>
+                                <a href="https://github.com/nangg22/" target="_blank" title="Source Code" style="color: var(--text-muted); font-size: 1.3rem; transition: color 0.3s;"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-card" data-reveal="bottom">
+                        <div class="portfolio-img">
+                            <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=600&auto=format&fit=crop" alt="Scholarship Apps" loading="lazy">
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Scholarship Apps</h3>
+                            <p>Aplikasi berbasis web untuk manajemen dan pendaftaran beasiswa.</p>
+                            <div style="display: flex; gap: 15px; align-items: center; margin-top: 15px;">
+                                <a href="https://scholarship-apps-xi.vercel.app/" class="portfolio-link" target="_blank">Lihat Detail <i class="fas fa-arrow-right"></i></a>
+                                <a href="https://github.com/nangg22/scholarship-apps" target="_blank" title="Source Code" style="color: var(--text-muted); font-size: 1.3rem; transition: color 0.3s;"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-card" data-reveal="bottom">
+                        <div class="portfolio-img">
+                            <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=600&auto=format&fit=crop" alt="Marketplace" loading="lazy">
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Marketplace Web</h3>
+                            <p>Platform e-commerce untuk memfasilitasi transaksi jual beli produk.</p>
+                            <div style="display: flex; gap: 15px; align-items: center; margin-top: 15px;">
+                                <a href="https://marketplace-1vxs.vercel.app/" class="portfolio-link" target="_blank">Lihat Detail <i class="fas fa-arrow-right"></i></a>
+                                <a href="https://github.com/nangg22/marketplace" target="_blank" title="Source Code" style="color: var(--text-muted); font-size: 1.3rem; transition: color 0.3s;"><i class="fab fa-github"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -323,15 +394,15 @@
                         </div>
                     </div>
                     <div class="contact-form" data-reveal="right">
-                        <form id="form-contact">
+                        <form id="form-contact" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
                             <div class="form-group">
-                                <input type="text" id="name" placeholder="Nama Lengkap" required>
+                                <input type="text" id="name" name="name" placeholder="Nama Lengkap" required>
                             </div>
                             <div class="form-group">
-                                <input type="email" id="email" placeholder="Alamat Email" required>
+                                <input type="email" id="email" name="email" placeholder="Alamat Email" required>
                             </div>
                             <div class="form-group">
-                                <textarea id="message" rows="5" placeholder="Pesan Anda" required></textarea>
+                                <textarea id="message" name="message" rows="5" placeholder="Pesan Anda" required></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary btn-block">Kirim Pesan</button>
                         </form>
@@ -339,14 +410,57 @@
                 </div>
             </div>
         </section>
+        <!-- Floating Settings Panel -->
+        <div class="floating-settings" id="floating-settings">
+            <button id="settings-toggle" class="settings-toggle-btn" aria-label="Toggle Settings">
+                <i class="fas fa-cog"></i>
+            </button>
+            <div class="settings-panel">
+                <h3>Sistem Telemetri</h3>
+                
+                <div class="telemetry-group">
+                    <div class="telemetry-header">
+                        <span>CPU Usage</span>
+                        <span id="cpu-telemetry-txt">0%</span>
+                    </div>
+                    <div class="telemetry-bar">
+                        <div id="cpu-telemetry" class="telemetry-progress" style="width: 0%;"></div>
+                    </div>
+                </div>
+
+                <div class="telemetry-group">
+                    <div class="telemetry-header">
+                        <span>RAM Usage</span>
+                        <span id="ram-telemetry-txt">0%</span>
+                    </div>
+                    <div class="telemetry-bar">
+                        <div id="ram-telemetry" class="telemetry-progress" style="width: 0%;"></div>
+                    </div>
+                </div>
+
+                <div class="slider-group">
+                    <label for="orb-speed">Kecepatan Orb: <span id="orb-speed-val">1.0x</span></label>
+                    <input type="range" id="orb-speed" min="10" max="300" value="100">
+                </div>
+
+                <div class="debug-logs-container">
+                    <h4>Log Aktivitas</h4>
+                    <div id="debug-logs" class="debug-logs"></div>
+                </div>
+            </div>
+        </div>
     </main>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Kembali ke atas" title="Kembali ke atas">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">Danang<span>.</span></div>
-                <p>&copy; 2024 Danang Prajadinata Adiwijaya. Dibuat dengan jiwa <span>Glory Glory Manchester
-                        United</span>.</p>
+                <p>&copy; 2026 Danang Prajadinata Adiwijaya. Dibuat dengan jiwa <span>Glory Glory Manchester United</span>.</p>
                 <div class="footer-social">
                     <a href="https://www.linkedin.com/in/danang-prajadinata-adiwijaya-89ab84354"><i
                             class="fab fa-linkedin"></i></a>
